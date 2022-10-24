@@ -1,12 +1,17 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 
 func TestHello(t *testing.T) {
 	lista := map[string]string{
 		"Samuel": "en",
 	}
+
+	fmt.Println(lista)
 
 	got := Hello("Kayo", "es")
 	want := "Hola, Kayo"
