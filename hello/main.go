@@ -2,13 +2,27 @@ package main
 
 import "fmt"
 
-func Hello(name string) string {
+// Sauda as pessoas recebendo o nome e a lingua
+func Hello(name, language string) (saudacao string) {
 	if name == "" {
 		name = "World"
 	}
-	return "Hello, " + name
+	
+	switch language {
+	case "es":
+		saudacao = "Hola, "
+	case "pt":
+		saudacao = "Ola, "
+	case "fr":
+		saudacao = "Salut, "
+	default: 
+		saudacao = "Hello, "
+	}
+
+	saudacao = saudacao + name
+	return
 }
 
 func main() {
-	fmt.Println(Hello("world"))
+	fmt.Println(Hello("", "pt"))
 }
