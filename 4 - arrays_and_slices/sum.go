@@ -7,3 +7,14 @@ func Sum(numeros []int) int {
 	}
 	return soma
 }
+
+func SumAll(numeros ...[]int) []int {
+
+	var sums []int
+
+	for _, numeros := range numeros {
+		sums = append(sums, Sum(numeros))
+	}
+
+	return sums
+}
