@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"log"
+	"net/http"
+)
 
 func main() {
-	texto := `{ 12 + 3}`
-	fmt.Println(texto)
+	handler := http.HandlerFunc(PlayerServer)
+	log.Fatal(http.ListenAndServe(":5000", handler))
 }
