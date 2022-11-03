@@ -1,31 +1,29 @@
 package main
 
-import (
-	"fmt"
-	"testing"
-)
-
+import "testing"
 
 func TestHello(t *testing.T) {
-	lista := map[string]string{
-		"Samuel": "en",
+	lista := []struct {
+		nome string
+		idioma string
+		want string
+	}{
+		{"Maria", "pt", "Ola, Maria"},
+		{"Samuel", "en", "Hello, Samuel"},
+		{"Kaio", "es", "Hola, Kaio"},
+		{"Dayanne", "fr", "Salut, Dayanne"},
+		{"Mohammed", "ar", "Idioma nao encontrado"},
 	}
 
-	fmt.Println(lista)
-
-	got := Hello("Kayo", "es")
-	want := "Hola, Kayo"
-
-	if got != want {
-		t.Errorf("\ngot %v\nwant %v", got, want)
+	for _, elemento := range lista {
+		t.Run("teste " + elemento.nome, func(t *testing.T){
+			got := Hello(elemento.nome, elemento.idioma)
+			want := elemento.want
+		
+			if got != want {
+				t.Errorf("\ngot %v\nwant %v", got, want)
+			}
+		})
 	}
-}
 
-func TestHello2(t *testing.T) {
-	got := Hello2("Kayo", "es")
-	want := "Hola, Kayo"
-
-	if got != want {
-		t.Errorf("\ngot %v\nwant %v", got,want)
-	}
 }
