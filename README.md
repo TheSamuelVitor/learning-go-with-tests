@@ -1,5 +1,8 @@
 # learning-go-with-tests
 Aprendendo TDD e Golang simultaneamente
+Link para o curso: 
+[Clique aqui](https://github.com/quii/learn-go-with-tests)
+
 
 
 ## Alguns comandos no terminal
