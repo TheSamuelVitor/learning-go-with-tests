@@ -1,4 +1,4 @@
-package main
+package greetings
 
 // Greets someone
 func Hello(name, language string) string {

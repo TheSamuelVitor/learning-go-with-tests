@@ -1,4 +1,4 @@
-package main
+package hello
 
 // Sauda as pessoas recebendo o nome e a lingua
 func Hello(name, language string) (saudacao string) {
