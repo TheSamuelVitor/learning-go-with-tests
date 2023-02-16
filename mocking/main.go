@@ -59,7 +59,7 @@ func (s *SpySleeper) Sleep() {
 }
 
 const (
-	finalWord      = "Go!"
+	finalWord      = "Go!\n"
 	countdownStart = 3
 )
 
