@@ -5,18 +5,19 @@ import (
 	"testing"
 )
 
+// Person defines the object to a person
 type Person struct {
 	Name    string
 	Profile Profile
 }
 
+// Profile defines the struct of a profile
 type Profile struct {
 	Age  int
 	City string
 }
 
 func TestWalk(t *testing.T) {
-
 	cases := []struct {
 		Name          string
 		Input         interface{}
